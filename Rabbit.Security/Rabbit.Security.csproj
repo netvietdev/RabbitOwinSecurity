@@ -32,10 +32,18 @@
   <ItemGroup>
     <Compile Include="Claims.cs" />
     <Compile Include="ClaimsIdentityExtensions.cs" />
+    <Compile Include="Customs\ExternalLoginDataParserFactory.cs" />
+    <Compile Include="Customs\FacebookClaimsParser.cs" />
+    <Compile Include="Customs\GitHubClaimsParser.cs" />
+    <Compile Include="Customs\GoogleClaimsParser.cs" />
+    <Compile Include="Customs\LinkedInClaimsParser.cs" />
+    <Compile Include="Customs\TwitterClaimsParser.cs" />
     <Compile Include="ExternalLoginData.cs" />
+    <Compile Include="Customs\IExternalLoginDataParser.cs" />
     <Compile Include="ILoginDataParser.cs" />
     <Compile Include="OAuthLoginDataParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

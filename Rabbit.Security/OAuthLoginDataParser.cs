@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Claims;
+using Rabbit.Security.Customs;
 
 namespace Rabbit.Security
 {
@@ -31,7 +32,16 @@ namespace Rabbit.Security
                     Email = identity.GetFirstOrDefault(ClaimTypes.Email),
                 };
 
+            ParseDetailLoginData(identity, ref loginData);
+
             return loginData;
+        }
+
+        private void ParseDetailLoginData(ClaimsIdentity identity, ref ExternalLoginData loginData)
+        {
+            var detailParserFactory = new ExternalLoginDataParserFactory();
+            var detailParser = detailParserFactory.Create(loginData.ProviderName);
+            detailParser.Parse(identity, ref loginData);
         }
     }
 }
