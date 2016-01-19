@@ -2,7 +2,7 @@
 
 namespace Rabbit.Security.Customs
 {
-    public class ExternalLoginDataParserFactory
+    class ExternalLoginDataParserFactory
     {
         public IExternalLoginDataParser Create(string providerName)
         {

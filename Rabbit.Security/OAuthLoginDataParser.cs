@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Rabbit.Security.Customs;
+using System;
 using System.Security.Claims;
-using Rabbit.Security.Customs;
 
 namespace Rabbit.Security
 {
@@ -39,8 +39,7 @@ namespace Rabbit.Security
 
         private void ParseDetailLoginData(ClaimsIdentity identity, ref ExternalLoginData loginData)
         {
-            var detailParserFactory = new ExternalLoginDataParserFactory();
-            var detailParser = detailParserFactory.Create(loginData.ProviderName);
+            var detailParser = new ExternalLoginDataParserFactory().Create(loginData.ProviderName);
             detailParser.Parse(identity, ref loginData);
         }
     }

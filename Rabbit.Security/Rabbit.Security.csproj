@@ -39,7 +39,7 @@
     <Compile Include="Customs\LinkedInClaimsParser.cs" />
     <Compile Include="Customs\TwitterClaimsParser.cs" />
     <Compile Include="ExternalLoginData.cs" />
-    <Compile Include="Customs\IExternalLoginDataParser.cs" />
+    <Compile Include="IExternalLoginDataParser.cs" />
     <Compile Include="ILoginDataParser.cs" />
     <Compile Include="OAuthLoginDataParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
