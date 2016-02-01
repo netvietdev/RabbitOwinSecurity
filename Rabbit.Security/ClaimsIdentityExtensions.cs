@@ -7,7 +7,7 @@ namespace Rabbit.Security
         public static string GetFirstOrDefault(this ClaimsIdentity identity, string claimType)
         {
             var claim = identity.FindFirst(claimType);
-            return (claim == null) ? string.Empty : claim.Value;
+            return (claim == null) ? null : claim.Value;
         }
     }
 }

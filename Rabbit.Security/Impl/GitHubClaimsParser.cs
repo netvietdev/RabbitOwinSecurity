@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Rabbit.Security.Customs
+namespace Rabbit.Security.Impl
 {
     public class GitHubClaimsParser : IExternalLoginDataParser
     {
