@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Rabbit.Security</id>
-    <version>1.3.1</version>
+    <version>1.4.0</version>
     <title>Rabbit.Security</title>
     <authors>juniho</authors>
     <owners>RabbitSoftware</owners>
@@ -10,6 +10,8 @@
       Provide extend classes to work with OAuth
     </description>
     <releaseNotes>
+      Version 1.4.0
+      - Integrate with popular providers
       Version 1.3.1
       - Fix FacebookClaimsParser to not adding ExternalExpiresIn
       Version 1.3.0
@@ -27,6 +29,11 @@
     <copyright>Copyright @ RabbitSoftware 2015</copyright>
     <dependencies>
       <group targetFramework="net45">
+        <dependency id="Rabbit.Foundation" version="1.8.1" />
+        <dependency id="Owin.Security.Providers" version="1.26" />
+        <dependency id="Microsoft.Owin.Security.Facebook" version="3.0.1" />
+        <dependency id="Microsoft.Owin.Security.Google" version="3.0.1" />
+        <dependency id="Microsoft.Owin.Security.Twitter" version="3.0.1" />
       </group>
     </dependencies>
     <references></references>
