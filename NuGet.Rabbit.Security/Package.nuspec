@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Rabbit.Security</id>
-    <version>1.4.1</version>
-    <title>Rabbit.Security</title>
+    <id>Rabbit.Owin.Security</id>
+    <version>1.5.0</version>
+    <title>Rabbit.Owin.Security</title>
     <authors>juniho</authors>
     <owners>RabbitSoftware</owners>
     <description>
@@ -30,7 +30,7 @@
     <dependencies>
       <group targetFramework="net45">
         <dependency id="Rabbit.Foundation" version="1.8.1" />
-        <dependency id="Owin.Security.Providers" version="1.26" />
+        <dependency id="Owin.Security.Providers" version="1.27" />
         <dependency id="Microsoft.Owin.Security.Facebook" version="3.0.1" />
         <dependency id="Microsoft.Owin.Security.Google" version="3.0.1" />
         <dependency id="Microsoft.Owin.Security.Twitter" version="3.0.1" />

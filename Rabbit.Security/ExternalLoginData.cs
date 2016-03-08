@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Rabbit.Security
+namespace Rabbit.Owin.Security
 {
     public class ExternalLoginData
     {

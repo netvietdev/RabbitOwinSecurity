@@ -1,4 +1,6 @@
 ﻿using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Facebook;
+using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.Twitter;
 using Owin;
 using Owin.Security.Providers.GitHub;
@@ -7,7 +9,7 @@ using Owin.Security.Providers.Yahoo;
 using Rabbit.Foundation.Data;
 using System.Collections.Generic;
 
-namespace Rabbit.Security
+namespace Rabbit.Owin.Security
 {
     public static class OAuthRegistrationExtensions
     {
@@ -24,23 +26,43 @@ namespace Rabbit.Security
 
                 if (oauthProvider.Key.EndsWith(OAuthProviders.LinkedIn))
                 {
-                    appBuilder.UseLinkedInAuthentication(keysInfo[0], keysInfo[1]);
+                    appBuilder.UseLinkedInAuthentication(new LinkedInAuthenticationOptions()
+                    {
+                        ClientId = keysInfo[0],
+                        ClientSecret = keysInfo[1]
+                    });
                 }
                 else if (oauthProvider.Key.EndsWith(OAuthProviders.GitHub))
                 {
-                    appBuilder.UseGitHubAuthentication(keysInfo[0], keysInfo[1]);
+                    appBuilder.UseGitHubAuthentication(new GitHubAuthenticationOptions()
+                    {
+                        ClientId = keysInfo[0],
+                        ClientSecret = keysInfo[1],
+                    });
                 }
                 else if (oauthProvider.Key.EndsWith(OAuthProviders.Google))
                 {
-                    appBuilder.UseGoogleAuthentication(keysInfo[0], keysInfo[1]);
+                    appBuilder.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+                    {
+                        ClientId = keysInfo[0],
+                        ClientSecret = keysInfo[1],
+                    });
                 }
                 else if (oauthProvider.Key.EndsWith(OAuthProviders.Yahoo))
                 {
-                    appBuilder.UseYahooAuthentication(keysInfo[0], keysInfo[1]);
+                    appBuilder.UseYahooAuthentication(new YahooAuthenticationOptions()
+                    {
+                        ConsumerKey = keysInfo[0],
+                        ConsumerSecret = keysInfo[1]
+                    });
                 }
                 else if (oauthProvider.Key.EndsWith(OAuthProviders.Facebook))
                 {
-                    appBuilder.UseFacebookAuthentication(keysInfo[0], keysInfo[1]);
+                    appBuilder.UseFacebookAuthentication(new FacebookAuthenticationOptions()
+                    {
+                        AppId = keysInfo[0],
+                        AppSecret = keysInfo[1]
+                    });
                 }
                 else if (oauthProvider.Key.EndsWith(OAuthProviders.Twitter))
                 {

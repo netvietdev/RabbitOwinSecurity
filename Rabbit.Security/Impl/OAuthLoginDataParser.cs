@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Claims;
 
-namespace Rabbit.Security.Impl
+namespace Rabbit.Owin.Security.Impl
 {
     public class OAuthLoginDataParser : ILoginDataParser
     {

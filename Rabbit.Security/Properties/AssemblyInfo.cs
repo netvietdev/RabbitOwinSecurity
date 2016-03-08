@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Rabbit.Security")]
+[assembly: AssemblyTitle("Rabbit.Owin.Security")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("RabbitSoftware")]
-[assembly: AssemblyProduct("Rabbit.Security")]
+[assembly: AssemblyProduct("Rabbit.Owin.Security")]
 [assembly: AssemblyCopyright("Copyright © RabbitSoftware 2015-2016")]
-[assembly: AssemblyTrademark("Rabbit.Security")]
+[assembly: AssemblyTrademark("Rabbit.Owin.Security")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

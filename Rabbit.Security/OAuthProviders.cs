@@ -1,4 +1,4 @@
-﻿namespace Rabbit.Security
+﻿namespace Rabbit.Owin.Security
 {
     public static class OAuthProviders
     {

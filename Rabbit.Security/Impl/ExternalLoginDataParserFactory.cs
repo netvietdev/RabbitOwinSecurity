@@ -1,4 +1,4 @@
-﻿namespace Rabbit.Security.Impl
+﻿namespace Rabbit.Owin.Security.Impl
 {
     class ExternalLoginDataParserFactory
     {
