@@ -9,12 +9,5 @@
             This parser does nothing, just to handle the un-supported providers
             </summary>
         </member>
-        <member name="M:Rabbit.Owin.Security.OAuthRegistrationExtensions.RegisterOAuthProviders(Owin.IAppBuilder,System.Collections.Generic.IList{Rabbit.Foundation.Data.DataItem})">
-            <summary>
-            Register all oauth providers
-            </summary>
-            <param name="appBuilder"></param>
-            <param name="appSettings">Key = Provider, Value = ClientId/ClientSecret</param>
-        </member>
     </members>
 </doc>

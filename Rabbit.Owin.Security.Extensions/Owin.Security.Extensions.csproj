@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4B74F84-C796-4DC6-AFE7-2CE654583B43}</ProjectGuid>
+    <ProjectGuid>{3E2F3331-4313-4C18-BE52-8952A765AEEA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rabbit.Owin.Security</RootNamespace>
-    <AssemblyName>Rabbit.Owin.Security</AssemblyName>
+    <RootNamespace>Rabbit.Owin.Security.Extensions</RootNamespace>
+    <AssemblyName>Rabbit.Owin.Security.Extensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,26 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Rabbit.Owin.Security.XML</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="Claims.cs" />
-    <Compile Include="ClaimsIdentityExtensions.cs" />
-    <Compile Include="Impl\DefaultParser.cs" />
-    <Compile Include="Impl\ExternalLoginDataParserFactory.cs" />
-    <Compile Include="Impl\FacebookClaimsParser.cs" />
-    <Compile Include="Impl\GitHubClaimsParser.cs" />
-    <Compile Include="Impl\GoogleClaimsParser.cs" />
-    <Compile Include="Impl\LinkedInClaimsParser.cs" />
-    <Compile Include="Impl\TwitterClaimsParser.cs" />
-    <Compile Include="ExternalLoginData.cs" />
-    <Compile Include="IExternalLoginDataParser.cs" />
-    <Compile Include="ILoginDataParser.cs" />
-    <Compile Include="Impl\OAuthLoginDataParser.cs" />
-    <Compile Include="OAuthProviders.cs" />
-    <Compile Include="OAuthRegistrationExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -85,11 +66,24 @@
       <HintPath>..\packages\Rabbit.Foundation.1.8.1\lib\Rabbit.Foundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Rabbit.Owin.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rabbit.Owin.Security.1.6.1\lib\Rabbit.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <Compile Include="OAuthRegistrationExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
